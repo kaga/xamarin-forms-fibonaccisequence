@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:fibonaccisequence;assembly=fibonaccisequence"
+             x:Class="fibonaccisequence.MainPage">
+
+    <StackLayout>
+        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+            <Label Text="Welcome to Xamarin.Forms!" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+        </Frame>
+        <Label FontSize="16" Padding="30,24,30,0" Text="{Binding NumberLabelText}">
+        </Label>
+        <Button Text="Next Number" Command="{Binding MyCommand}">
+        </Button>
+        <StackLayout.BindingContext>
+            <local:NumberGeneratorViewModel/>
+        </StackLayout.BindingContext>
+    </StackLayout>
+</ContentPage>
