@@ -8,9 +8,9 @@
         <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
             <Label Text="Welcome to Xamarin.Forms!" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
         </Frame>
-        <Label FontSize="16" Padding="30,24,30,0" Text="{Binding NumberLabelText}">
+        <Label FontSize="16" Padding="30,24,30,0" Text="{Binding NumberLabelText}" AutomationId="NumberLabel">
         </Label>
-        <Button Text="Next Number" Command="{Binding MyCommand}">
+        <Button Text="Next Number" Command="{Binding MyCommand}" AutomationId="GenerateNextNumberButton">
         </Button>
         <StackLayout.BindingContext>
             <local:NumberGeneratorViewModel/>
