@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
+using fibonaccisequence.NumberGenerator;
 using Xamarin.Forms;
 
 namespace fibonaccisequence
@@ -40,18 +41,17 @@ namespace fibonaccisequence
             }
         }
 
+        private FibonacciSequence fibonaccisequence;// = new FibonacciSequence();
+
         public NumberGeneratorViewModel()
         {
             MyCommand = new Command(execute: () =>
             {
-                generateNextNumber();
+                fibonaccisequence = fibonaccisequence.NextSequence();
+                NumberLabelText = fibonaccisequence.Current.ToString();
             });
-            NumberLabelText = "-";
-        }
-
-        public void generateNextNumber()
-        {
-            NumberLabelText = "2";
+            fibonaccisequence = new FibonacciSequence();
+            NumberLabelText = fibonaccisequence.Current.ToString();
 
         }
     }
