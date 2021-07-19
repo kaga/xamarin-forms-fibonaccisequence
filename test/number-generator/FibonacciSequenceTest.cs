@@ -5,11 +5,7 @@ namespace test
 {
     public class FibonacciSequenceTest
     {
-        [SetUp]
-        public void Setup()
-        {
-        }
-
+        
         [Test]
         public void TestInitialSequence()
         {
